@@ -1,0 +1,7 @@
+streamlit
+openai
+llama-index
+chromadb
+pandas
+python-dotenv
+sentence-transformers
