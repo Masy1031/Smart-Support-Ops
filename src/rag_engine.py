@@ -1,8 +1,8 @@
 import os
-from llam-index.core import VectorStoreIndex, SimpleDirectoryReader
-from llam-index.embeddings.huggingface import HuggingFaceEmbedding
-from llam-index.llms.openai import OpenAI
-from llam-index.vector_stores.chroma import ChromaVectorStore
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from llama_index.llms.openai import OpenAI
+from llama_index.vector_stores.chroma import ChromaVectorStore
 import chromadb
 from dotenv import load_dotenv
 import logging
