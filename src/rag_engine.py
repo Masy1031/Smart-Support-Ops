@@ -27,7 +27,11 @@ def initialize_rag_engine():
 
     # Initialize embedding model
     # Note: HuggingFaceEmbedding will download the model the first time it's used.
-    embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
+    # Using a local cache folder to avoid path length issues and corruption on Windows
+    embed_model = HuggingFaceEmbedding(
+        model_name="BAAI/bge-small-en-v1.5",
+        cache_folder="./data/model_cache"
+    )
 
     # Check if index already exists to avoid re-indexing on every run
     if len(chroma_collection.get()['ids']) == 0:
